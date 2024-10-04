@@ -1,0 +1,106 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000000;
+  }
+
+  #startButton {
+    background-color: #FFD217; /* Amarillo */
+    color: #70200D; /* Café */
+    border: #70200D;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 250px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+#startButton:hover {
+    background-color: #e6b800; /* Cambia a un amarillo más oscuro al pasar el mouse */
+}
+
+.textos {
+    color: #FFD217; /* Amarillo */
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+
+  }
+
+  
+  .flower {
+ 
+
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
+  }
+  
+  .petal {
+    fill: transparent;
+    stroke: #D28C11; /* Color del borde */
+    stroke-width: 2;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+    transition: fill 1s ease-in-out;
+  }
+
+  .circulo {
+    fill: transparent;
+     /* Color del relleno */
+  }
+  .circulo.filled {
+    fill: #70200D; /* Color del relleno */
+  }
+  
+  .petal.filled {
+    fill: #FFD217; /* Color del relleno */
+  }
+  .petal.filled2 {
+    fill: #000000; /* Color del relleno */
+  }
+  .petal.filled3 {
+    fill: #FFD217; /* Color del relleno */
+  }
+
+  .petal.drawing {
+    animation: draw 2s ease forwards;
+  }
+
+
+
+  .tallo.filled{
+    fill:#043102
+  }
+
+  .drawing2 {
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+
+
+.show {
+  display: block; /* Mostrar elemento */
+  opacity: 1; /* Aplicar efecto de opacidad al mostrarse */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+  
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
